@@ -1,0 +1,5 @@
+Java AWT - stands for Abstract Window Toolkit
+Contains a set of classes used for developing user interfaces
+AWT components are called heavyweight because they use the operating system's own native widgets, meaning on Windows, AWT button looks like a windows button,
+but on Mac, AWT buttons looks like a mac button.
+

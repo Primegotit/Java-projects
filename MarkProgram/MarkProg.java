@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class MarkProg {
     public static void main(String[] args) {
-
         int marks[] = new int[40] ;
         int total = 0;
         int average = 0;
@@ -11,17 +10,12 @@ public class MarkProg {
         getMarks(marks);
         total = getSum(marks);
 
-    
-
         average = total / 40;
         System.out.println("The average is: " + average);
         System.out.println("The highest mark is: " + highest_mark(marks));
-
     }
 
-
     public static void getMarks(int[] marks_array){
-
         int x = 0;
         Scanner input = new Scanner(System.in);
         int current_num = 0;
@@ -47,10 +41,7 @@ public class MarkProg {
                 }
             }
         }
-
     }
-
-
     public static int getSum(int[] entered_marks_array){
         int total = 0;
         for (int mark : entered_marks_array) {
@@ -58,7 +49,6 @@ public class MarkProg {
         }
         return total;
     }
-
     public static int highest_mark(int[] marks_array){
         int highest = 0;
         for (int i : marks_array) {
