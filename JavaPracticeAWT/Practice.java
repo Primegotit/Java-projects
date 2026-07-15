@@ -1,6 +1,11 @@
 package JavaPracticeAWT;
 import java.awt.*;
-public class Practice extends Frame {
+import java.awt.event.*;
+import javax.swing.JOptionPane;
+public class Practice extends Frame implements ActionListener {
+
+    Button btn1 = new Button("Login");
+    Button btn2 = new Button("Reset");
 
     public Practice(){
 
@@ -41,10 +46,11 @@ public class Practice extends Frame {
         Panel myPanel = new Panel();
         myPanel.setLayout(new FlowLayout(FlowLayout.RIGHT,5,5));
 
-        Button btn1 = new Button("Username");
-        Button btn2 = new Button("Password");
 
-        // btn1.addActionListener();
+
+        btn1.addActionListener(this);
+        btn2.addActionListener(this);
+
 
 
         //i will do the ActionListener concepts tomorrow.
@@ -55,6 +61,26 @@ public class Practice extends Frame {
         this.setSize(750,400);
         this.setVisible(true);
         this.setResizable(true);
+
+    }
+
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource() == btn1){
+            JOptionPane.showMessageDialog(
+                this,
+                "Login",
+                "Login was successful",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+        }
+        else if(e.getActionCommand() == "Reset"){
+            JOptionPane.showMessageDialog(
+                this,
+                "Reset",
+                "I will reset the textboxes for you",
+                JOptionPane.INFORMATION_MESSAGE
+            );
+        }
 
     }
     public static void main(String args[]){
