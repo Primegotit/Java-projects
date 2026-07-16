@@ -63,7 +63,8 @@ public class Practice extends Frame implements ActionListener {
         this.setResizable(true);
 
     }
-
+    
+    @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == btn1){
             JOptionPane.showMessageDialog(
